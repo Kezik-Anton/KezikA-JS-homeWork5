@@ -278,24 +278,93 @@ console.log('Большее из чисел - ' + max(e, f));
 
 // getNumbersArray(w_arr);
 
-// task 12
+// // task 12
 
-console.log('// Задание 12. Напишите ф-цию, запрашивающую имя, фамилия, отчество и номер группы студента и выводящую введённые данные в определенном виде');
+// console.log('// Задание 12. Напишите ф-цию, запрашивающую имя, фамилия, отчество и номер группы студента и выводящую введённые данные в определенном виде');
 
 
-function getBadge() {
+// function getBadge() {
 
-    let lastname = prompt('Введите фамилию'),
-    firstname = prompt('Введите имя'),
-    patronymic = prompt('Введите отчество'),
-    group = prompt('Введите номер группы');
+//     let z_arr = [],
+//     lastname = prompt('Введите фамилию'),
+//     firstname = prompt('Введите имя'),
+//     patronymic = prompt('Введите отчество'),
+//     group = prompt('Введите номер группы');
 
-    let fullname =  firstname + ' ' + lastname + ' ' + patronymic,
-        groupname = 'Выполнил: студент гр. ' + group;
-
-    console.log(fullname);
-    console.log(groupname);
+//     z_arr = ['', 'Домашняя работа: «Функции»', firstname + ' ' + lastname + ' ' + patronymic, 'Выполнил: студент гр. ' + group, ''];
     
+//     let max_length = 0;
+
+//     for (let i = 1; i < z_arr.length; i++) {
+
+//         if (z_arr[i].length > z_arr[i - 1].length) max_length = z_arr[i].length;
+//         else max_length = z_arr[i - 1].length;
+
+//     }
+
+//     let z_length = 0,
+//         z_symbal = '';
+
+//     for (let i = 0; i < 5; i++) {
+
+//         if (z_arr[i] != '') z_symbal = ' ';
+//         else z_symbal = '*';
+
+//         z_arr[i] = '*' + z_arr[i] + new Array(max_length - z_arr[i].length + 1).join(z_symbal) + '*';    
+        
+//         console.log(z_arr[i]);
+
+//     }
+    
+// }
+
+// getBadge();
+
+
+// task 13
+
+console.log('// Задание 13. Напишите ф-цию, которая должна проверить правильность ввода адреса эл. почты, неиспользуя регулярные выражения.')
+
+x = prompt('Введите email');
+
+function countSymbal(symbal, array) {
+
+    for (let i=0; i < array.length; i++) {
+        
+    }
+
 }
 
-getBadge();
+function checkEmail(email) {
+
+    email = Array.from(email.toLowerCase());
+
+    let valid_leter = Array.from('abcdefghijklmnopqrstuvwxyz'),
+        valid_symbol = Array.from('@_-.'),
+        valid_number = Array.from('1234567890');
+
+    console.log(email);
+    console.log(valid_leter);
+    console.log(valid_symbol);
+    console.log(valid_number);
+
+    for (let char of email) { // проверяем на запрещенные символы
+
+        if(!(valid_leter.includes(char) || valid_symbol.includes(char) || valid_symbol.includes(valid_number))) {
+            return false;
+        } 
+
+    }
+    
+
+    // if (email.lastIndexOf('@') != -1) {  // проверяем на символ @
+
+
+
+    // } else {
+    //     return false;
+    // }
+
+}
+
+console.log(checkEmail(x));
