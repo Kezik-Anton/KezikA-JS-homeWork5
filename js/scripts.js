@@ -282,3 +282,20 @@ console.log('Большее из чисел - ' + max(e, f));
 
 console.log('// Задание 12. Напишите ф-цию, запрашивающую имя, фамилия, отчество и номер группы студента и выводящую введённые данные в определенном виде');
 
+
+function getBadge() {
+
+    let lastname = prompt('Введите фамилию'),
+    firstname = prompt('Введите имя'),
+    patronymic = prompt('Введите отчество'),
+    group = prompt('Введите номер группы');
+
+    let fullname =  firstname + ' ' + lastname + ' ' + patronymic,
+        groupname = 'Выполнил: студент гр. ' + group;
+
+    console.log(fullname);
+    console.log(groupname);
+    
+}
+
+getBadge();
